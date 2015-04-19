@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="info" name="MyApp" packages="org.mintcode.errabbit.example">
+<Appenders>
+    <JMS name="errabbit"
+         queueBindingName="errabbit.report.example"
+         factoryBindingName="ConnectionFactory"
+         providerURL = "tcp://localhost:61616"
+         userName = "sender"
+         password = "senderpassword!"
+            />
+</Appenders>
+<Loggers>
+    <Root level="error">
+        <AppenderRef ref="errabbit"/>
+    </Root>
+</Loggers>
+</Configuration>
+
