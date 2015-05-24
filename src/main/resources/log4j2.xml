@@ -8,10 +8,16 @@
          userName = "sender"
          password = "senderpassword!"
             />
+    <Console name="STDOUT" target="SYSTEM_OUT">
+        <PatternLayout pattern="%m%n"/>
+    </Console>
 </Appenders>
 <Loggers>
-    <Root level="error">
+    <Logger name="org.mintcode.errabbit.example" level="error">
         <AppenderRef ref="errabbit"/>
+    </Logger>
+    <Root level="error">
+        <AppenderRef ref="STDOUT"/>
     </Root>
 </Loggers>
 </Configuration>
