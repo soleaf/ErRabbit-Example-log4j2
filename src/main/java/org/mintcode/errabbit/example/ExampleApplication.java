@@ -12,7 +12,7 @@ public class ExampleApplication {
     public static void main(String[] args){
 
         Logger logger = LogManager.getLogger(ExampleApplication.class);
-
+        logger.warn("hello");
         try{
 
             Thread.sleep(3000);
@@ -23,6 +23,10 @@ public class ExampleApplication {
         catch (Exception e){
             logger.error(e.getMessage(),e);
         }
+        TestClass1 testClass1 = new TestClass1();
+        TestClass2 testClass2 = new TestClass2();
+        testClass1.run();
+        testClass2.run();
 
         try {
             Thread.sleep(5000);

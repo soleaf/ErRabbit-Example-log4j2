@@ -2,7 +2,7 @@
 <Configuration status="info" name="MyApp" packages="org.mintcode.errabbit.example">
 <Appenders>
     <JMS name="errabbit"
-         queueBindingName="errabbit.report.example"
+         queueBindingName="errabbit"
          factoryBindingName="ConnectionFactory"
          providerURL = "tcp://localhost:61616"
          userName = "sender"
@@ -13,10 +13,10 @@
     </Console>
 </Appenders>
 <Loggers>
-    <Logger name="org.mintcode.errabbit.example" level="error">
+    <Logger name="org.mintcode.errabbit.example" level="warn">
         <AppenderRef ref="errabbit"/>
     </Logger>
-    <Root level="error">
+    <Root level="warn">
         <AppenderRef ref="STDOUT"/>
     </Root>
 </Loggers>

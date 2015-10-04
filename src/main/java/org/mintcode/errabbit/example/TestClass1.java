@@ -23,9 +23,6 @@ public class TestClass1 {
             logger.error(e.getMessage(),e);
         }
 
-        TestClass1 testClass1 = new TestClass1();
-        testClass1.run();
-
         try {
             Thread.sleep(5000);
         } catch (InterruptedException e) {
